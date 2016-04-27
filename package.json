@@ -1,0 +1,28 @@
+{
+  "name": "virtual-sftp",
+  "description": "Copy files & folders from different locations and send them over sftp/ssh to a new location inside an basedir.",
+  "version": "0.0.1",
+  "main": "./lib/virtual-sftp.js",
+  "license": "MIT",
+  "author": {
+    "name": "Anton Hammerschmidt"
+  },
+  "dependencies": {
+    "lodash": "^4.11.1",
+    "scp2": "^0.3.0",
+    "async": "^2.0.0-rc.3"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "sftp",
+    "scp",
+    "ssh",
+    "virtual",
+    "filesystem",
+    "remote",
+    "copy",
+    "sync"
+  ]
+}
