@@ -7,6 +7,14 @@
   "author": {
     "name": "Anton Hammerschmidt"
   },
+  "homepage": "https://github.com/toni89/virtual-sftp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toni89/virtual-sftp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/toni89/virtual-sftp/issues"
+  },
   "dependencies": {
     "lodash": "^4.11.1",
     "scp2": "^0.3.0",
