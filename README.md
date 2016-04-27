@@ -19,7 +19,7 @@ var sync = new vsftp({
 sync
     .addPath('/myfolder')    // -> /mybase/myfolder
     .addPath('/somewhere/myfolder2', 'renamedfolder')    // -> /mybase/renamedfolder
-    .addPath('/somewhere/myfolder3', 'newfolder/renamedfolder)    // -> /mybase/newfolder/renamedfolder
+    .addPath('/somewhere/myfolder3', 'newfolder/renamedfolder')    // -> /mybase/newfolder/renamedfolder
     .addPath('/home/myuser/myfile')    // -> /mybase/myfile
     .addPath('/home/myuser/somewhere/myfile1', 'renamedfile')    // -> /mybase/renamedfile
     .addPath('/home/myuser/somewhere/myfile2', 'newfolder/renamedfile')    /mybase/newfolder/renamedfile
