@@ -31,7 +31,7 @@ sync
         console.log(error);
     })
     .on('progress', function(progress) {
-        console.log('Progress', progress.src, progress.target, progress.percent);
+        console.log('Progress', progress.src, progress.relative, progress.target, progress.percent);
     })
     .on('complete', function() {
         console.log('Completed');
