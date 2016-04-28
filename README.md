@@ -1,6 +1,6 @@
 # virtual-sftp
 
-Copy files & folders from different locations and send them over sftp/ssh to a new location inside an basedir.
+Synchronize files and folders from different locations and send them over sftp/ssh to a new location inside an basedir.
  
 ## Example
  
@@ -20,6 +20,7 @@ sync
     .addPath('/myfolder') // -> /mybase/myfolder
     .addPath('/somewhere/myfolder2', 'renamedfolder') // -> /mybase/renamedfolder
     .addPath('/somewhere/myfolder3', 'newfolder/renamedfolder') // -> /mybase/newfolder/renamedfolder
+    .addPath('/somewhere/myfolder4', '/') // -> /mybase
     .addPath('/home/myuser/myfile') // -> /mybase/myfile
     .addPath('/home/myuser/somewhere/myfile1', 'renamedfile') // -> /mybase/renamedfile
     .addPath('/home/myuser/somewhere/myfile2', 'newfolder/renamedfile') // -> /mybase/newfolder/renamedfile
@@ -38,4 +39,20 @@ sync
     .upload();
 ```
 
+## Example with Sync
+
+```javascript
+var hashsum = require('hashsum');
+
+
+// Hashes generated on remote machine
+var hashes = hashsum.directorySync('/mybase', { relativePaths: true });
+
+// options etc., see above example
+
+sync
+    .addChecksum(hashes, 'sha1')
+    .addPath('/myfolder', 'my/crazy/path')
+    .upload();
+```
  

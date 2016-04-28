@@ -16,9 +16,10 @@
     "url": "https://github.com/toni89/virtual-sftp/issues"
   },
   "dependencies": {
-    "lodash": "^4.11.1",
     "scp2": "^0.3.0",
-    "async": "^2.0.0-rc.3"
+    "async": "^2.0.0-rc.3",
+    "hashsum": "^0.0.1",
+    "extend": "^3.0.0"
   },
   "files": [
     "lib"
