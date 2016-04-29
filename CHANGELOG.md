@@ -1,3 +1,7 @@
+# v1.1.0
+
+- Replaced buggy hashsum module with fasthash
+
 # v1.0.0
 
 - Switched to Semver Versioning Format

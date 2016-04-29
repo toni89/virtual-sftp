@@ -55,8 +55,10 @@ sync
 
 ### Remote Machine
 ```javascript
-var hashsum = require('hashsum');
-var hashes = hashsum.directorySync('/mybase', { relativePaths: true, algorithm: 'md5' });
+var fasthash = require('fasthash');
+fasthash.directory('/mybase', function(hashes) {
+    // Send to server
+});
 ```
 
 ### Server
