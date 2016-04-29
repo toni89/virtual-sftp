@@ -6,7 +6,6 @@ Synchronize files and folders from different locations and send them over sftp/s
  
 ```javascript
 var vsftp = require('virtual-sftp');
-
 var sync = new vsftp({
     host: 'localhost',
     username: 'myuser',
@@ -14,7 +13,6 @@ var sync = new vsftp({
     remoteDir: '/mybase',
     tryKeyboard: true
 });
-
 
 sync
     .addPath('/myfolder') // -> /mybase/myfolder
@@ -33,25 +31,33 @@ sync
     .on('progress', function(progress) {
         console.log('Progress', progress.src, progress.relative, progress.target, progress.percent);
     })
-    .on('complete', function() {
-        console.log('Completed');
+    .on('complete', function(tree) {
+        console.log('Completed. Expected Filestructure is: ', tree);
     })
     .upload();
 ```
 
 ## Example with Sync
 
+### Remote Machine
 ```javascript
 var hashsum = require('hashsum');
+var hashes = hashsum.directorySync('/mybase', { relativePaths: true, algorithm: 'md5' });
+```
 
-
-// Hashes generated on remote machine
-var hashes = hashsum.directorySync('/mybase', { relativePaths: true });
-
-// options etc., see above example
+### Server
+```javascript
+var vsftp = require('virtual-sftp');
+var sync = new vsftp({
+    host: 'localhost',
+    username: 'myuser',
+    password: 'mysecret',
+    remoteDir: '/mybase',
+    tryKeyboard: true
+});
 
 sync
-    .addChecksum(hashes, 'sha1')
+    .addChecksum(hashes)
     .addPath('/myfolder', 'my/crazy/path')
     .upload();
 ```
