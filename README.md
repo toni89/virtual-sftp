@@ -15,13 +15,27 @@ var sync = new vsftp({
 });
 
 sync
-    .addPath('/myfolder') // -> /mybase/myfolder
-    .addPath('/somewhere/myfolder2', 'renamedfolder') // -> /mybase/renamedfolder
-    .addPath('/somewhere/myfolder3', 'newfolder/renamedfolder') // -> /mybase/newfolder/renamedfolder
-    .addPath('/somewhere/myfolder4', '/') // -> /mybase
-    .addPath('/home/myuser/myfile') // -> /mybase/myfile
-    .addPath('/home/myuser/somewhere/myfile1', 'renamedfile') // -> /mybase/renamedfile
-    .addPath('/home/myuser/somewhere/myfile2', 'newfolder/renamedfile') // -> /mybase/newfolder/renamedfile
+    // -> /mybase/myfolder
+    .addPath('/myfolder') 
+    
+    // -> /mybase/renamedfolder
+    .addPath('/somewhere/myfolder2', 'renamedfolder') 
+    
+    // -> /mybase/newfolder/renamedfolder
+    .addPath('/somewhere/myfolder3', 'newfolder/renamedfolder') 
+    
+    // -> /mybase
+    .addPath('/somewhere/myfolder4', '/') 
+    
+    // -> /mybase/myfile
+    .addPath('/home/myuser/myfile') 
+    
+    // -> /mybase/renamedfile
+    .addPath('/home/myuser/somewhere/myfile1', 'renamedfile') 
+    
+    // -> /mybase/newfolder/renamedfile
+    .addPath('/home/myuser/somewhere/myfile2', 'newfolder/renamedfile') 
+
     .on('connect', function() {
         console.log('Connected');
     })
