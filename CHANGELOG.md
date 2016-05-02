@@ -1,3 +1,7 @@
+# v1.1.2
+
+- Fixes Problem with root dir sync & expected tree
+
 # v1.1.1
 
 - Fixes Problem with sync to root dir
