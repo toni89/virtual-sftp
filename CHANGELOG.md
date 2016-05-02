@@ -1,3 +1,7 @@
+# v1.1.1
+
+- Fixes Problem with sync to root dir
+
 # v1.1.0
 
 - Replaced buggy hashsum module with fasthash

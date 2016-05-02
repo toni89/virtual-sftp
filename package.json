@@ -1,7 +1,7 @@
 {
   "name": "virtual-sftp",
   "description": "Synchronize files and folders from different locations and send them over sftp/ssh to a new location inside an basedir.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "./lib/virtual-sftp.js",
   "license": "MIT",
   "author": {

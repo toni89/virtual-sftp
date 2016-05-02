@@ -22,7 +22,10 @@ sync
     .addPath('/somewhere/myfolder2', 'renamedfolder') 
     
     // -> /mybase/newfolder/renamedfolder
-    .addPath('/somewhere/myfolder3', 'newfolder/renamedfolder') 
+    .addPath('/somewhere/myfolder3', 'newfolder/renamedfolder')
+    
+    // -> Same as previous line
+    .addPath('/somewhere/myfolder3', '/newfolder/renamedfolder') 
     
     // -> /mybase
     .addPath('/somewhere/myfolder4', '/') 
