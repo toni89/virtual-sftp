@@ -1,3 +1,8 @@
+# v1.1.3
+
+- Fixed  progress callback
+- Added folders to tree
+
 # v1.1.2
 
 - Fixes Problem with root dir sync & expected tree
